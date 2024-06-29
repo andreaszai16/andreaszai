@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Letter+Gothic+Standard&display=swap');
+
+body {
+    display: flex;
+    margin: 0;
+    font-family: 'Letter Gothic Standard', monospace;
+    background-color: #fffef6;
+}
+
+.sidebar {
+    width: 135px;
+    background-color: #fffef6;
+    padding: 20px;
+    border-right-style: solid;
+    border-color: #bdbdbd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    height: 100%;
+}
+
+.sidebar h3 {
+    margin-top: -6px;
+    color: #2f2f2f;
+    font-family: 'Letter Gothic Standard', monospace;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: #2f2f2f;
+    display: block;
+    margin-left: 0px;
+    font-family: 'Letter Gothic Standard', monospace;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: -15px;
+}
+
+.sidebar ul li {
+    margin-left: 10px;
+    margin-top: 4px;
+    font-family: 'Letter Gothic Standard', monospace;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    color: #2f2f2f;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: auto;
+    height: 100vh;
+    font-family: 'Letter Gothic Standard', monospace;
+}
+
+.content ul li {
+    list-style-type: none;
+    margin-top: 4px;
+    font-family: 'Letter Gothic Standard', monospace;
+}
+
+h1, p {
+    font-family: 'Letter Gothic Standard', monospace;
+}
+
+a {
+    color: inherit; /* blue colors for links too */
+    text-decoration: underline;
+  }
