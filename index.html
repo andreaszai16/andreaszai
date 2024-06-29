@@ -7,7 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
+    <div class="sidebar" id="sidebar">
+        <span class="closebtn" id="closebtn" onclick="closeNav()">x</span>
         <h3><a href="index.html">About Me</a></h3>
         <h3>Writing</h3>
         <ul>
@@ -16,10 +17,11 @@
             <li><a href="poetry.html">Poetry</a></li>
         </ul>
     </div>
-    <div class="content">
+    <span class="hamburger" id="hamburger" onclick="openNav()">☰</span>
+    <div class="content" id="content">
         <h1>About Me</h1>
         <img src="Images/self_portrait.jpg" style="width:300px;height:300px;">
-        <p style="width:500px;">Andreas Zai is an emerging writer with a background in finance and a passion for literature. He currently resides in Taipei, Taiwan.</p>
+        <p>Andreas Zai is an emerging writer with a background in finance and a passion for literature. He currently resides in Taipei, Taiwan.</p>
         <a href="https://www.instagram.com/andrezai16" target="_blank"><img src="Images/Instagram_logo_2016.png" style="width:30px;height:30px;"></a>
         <a href="https://www.linkedin.com/in/andreaszai/" target="_blank"><img src="Images/LinkedIn_logo_initials.png" style="width:30px;height:30px;"></a>
     </div>

@@ -10,12 +10,16 @@ body {
 .sidebar {
     width: 135px;
     background-color: #fffef6;
-    padding: 20px;
+    padding: 20px 20px;
     border-right-style: solid;
     border-color: #bdbdbd;
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
     position: fixed;
     height: 100%;
+    overflow-x: clip;
+    text-wrap: nowrap;
+    left: 0;
+    transition: 0.3s;
 }
 
 .sidebar h3 {
@@ -28,7 +32,7 @@ body {
     text-decoration: none;
     color: #2f2f2f;
     display: block;
-    margin-left: 0px;
+    margin-left: 0px 0;
     font-family: 'Letter Gothic Standard', monospace;
 }
 
@@ -39,7 +43,7 @@ body {
 }
 
 .sidebar ul li {
-    margin-left: 10px;
+    margin-left: 10px 0;
     margin-top: 4px;
     font-family: 'Letter Gothic Standard', monospace;
 }
@@ -53,6 +57,51 @@ body {
     overflow-x: auto;
     height: 100vh;
     font-family: 'Letter Gothic Standard', monospace;
+    transition: margin-left 0.3s;
+}
+
+.hamburger {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    left: 7px;
+}
+
+.closebtn {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 4px;
+    right: 15px;
+    display: none;
+    transition: 0.3s;
+}
+
+@media screen and (max-width: 768px) {
+    .sidebar {
+        width: 0;
+        height: 100%;
+        overflow-x: clip;
+        padding: 20px 0px;
+    }
+
+    .content {
+        margin-left: 45px;
+    }
+
+    .hamburger {
+        display: block;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .closebtn {
+        display: block;
+        visibility: hidden;
+        opacity: 0;
+    }
 }
 
 .content ul li {

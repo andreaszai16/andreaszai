@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="sidebar">
-        <h3><a href="index.html">About Me</a></h3>  
+    <div class="sidebar" id="sidebar">
+        <span class="closebtn" id="closebtn" onclick="closeNav()">x</span>
+        <h3><a href="index.html">About Me</a></h3>
         <h3>Writing</h3>
         <ul>
             <li><a href="essays.html">Essays</a></li>
@@ -16,7 +17,8 @@
             <li><a href="poetry.html">Poetry</a></li>
         </ul>
     </div>
-    <div class="content">
+    <span class="hamburger" id="hamburger" onclick="openNav()">☰</span>
+    <div class="content" id="content">
         <!-- Content goes here -->
     </div>
     <script src="script.js"></script>
