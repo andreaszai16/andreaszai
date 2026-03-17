@@ -1,10 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Letter+Gothic+Standard&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Noto+Serif+SC:wght@400;500&display=swap');
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
 body {
     display: flex;
-    margin: 0;
-    font-family: 'Letter Gothic Standard', monospace;
+    font-family: 'Lora', 'Noto Serif SC', Georgia, serif;
     background-color: #fffef6;
+    min-height: 100vh;
 }
 
 .sidebar {
@@ -25,7 +30,7 @@ body {
 .sidebar h3 {
     margin-top: -6px;
     color: #2f2f2f;
-    font-family: 'Letter Gothic Standard', monospace;
+    font-family: 'Playfair Display', Georgia, serif;
 }
 
 .sidebar a {
@@ -33,7 +38,7 @@ body {
     color: #2f2f2f;
     display: block;
     margin-left: 0px;
-    font-family: 'Letter Gothic Standard', monospace;
+    font-family: 'Lora', 'Noto Serif SC', Georgia, serif;
 }
 
 .sidebar ul {
@@ -45,18 +50,15 @@ body {
 .sidebar ul li {
     margin-left: 10px;
     margin-top: 4px;
-    font-family: 'Letter Gothic Standard', monospace;
+    font-family: 'Lora', 'Noto Serif SC', Georgia, serif;
 }
 
 .content {
     margin-left: 200px;
-    padding: 20px;
+    padding: 60px 20px;
     color: #2f2f2f;
     flex: 1;
-    overflow-y: auto;
-    overflow-x: auto;
-    height: 100vh;
-    font-family: 'Letter Gothic Standard', monospace;
+    font-family: 'Lora', 'Noto Serif SC', Georgia, serif;
     transition: margin-left 0.3s;
 }
 
@@ -107,19 +109,64 @@ body {
 .content ul li {
     list-style-type: none;
     margin-top: 4px;
-    font-family: 'Letter Gothic Standard', monospace;
+    font-family: 'Lora', 'Noto Serif SC', Georgia, serif;
 }
 
-h1, p {
-    font-family: 'Letter Gothic Standard', monospace;
+h1, h2, h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+}
+
+h1 {
+    margin-bottom: 3px;
+}
+
+p {
+    line-height: 1.7;
 }
 
 .date {
     color: #2f2f2f;
-    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 0.85em;
+    margin-top: 0;
+    margin-bottom: 1.5em;
 }
 
 a {
     color: inherit; /* inherits text color, overrides default browser link color */
     text-decoration: underline;
-  }
+}
+
+article.prose {
+    max-width: 65%;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+ol.reasons {
+    padding-left: 1.5em;
+    margin: 1em 0;
+}
+
+ol.reasons li {
+    line-height: 1.7;
+    margin-bottom: 0.75em;
+}
+
+p.signature {
+    text-align: right;
+    margin-top: 2em;
+}
+
+p.section-break {
+    margin: 0;
+    padding: 0;
+    line-height: 1.7;
+}
+
+@media screen and (max-width: 768px) {
+    article.prose {
+        max-width: 100%;
+    }
+}
