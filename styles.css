@@ -114,6 +114,11 @@ h1, p {
     font-family: 'Letter Gothic Standard', monospace;
 }
 
+.date {
+    color: #2f2f2f;
+    margin-bottom: 20px;
+}
+
 a {
     color: inherit; /* inherits text color, overrides default browser link color */
     text-decoration: underline;
