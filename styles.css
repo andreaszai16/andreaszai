@@ -106,10 +106,8 @@ body {
     }
 }
 
-.content ul li {
+.sidebar ul li {
     list-style-type: none;
-    margin-top: 4px;
-    font-family: 'Lora', 'Noto Serif SC', Georgia, serif;
 }
 
 h1, h2, h3 {
@@ -149,7 +147,8 @@ ol.reasons {
     margin: 1em 0;
 }
 
-ol.reasons li {
+ol.reasons li,
+ul.reasons li {
     line-height: 1.7;
     margin-bottom: 0.75em;
 }
@@ -163,6 +162,60 @@ p.section-break {
     margin: 0;
     padding: 0;
     line-height: 1.7;
+}
+
+h2 {
+    margin-top: 2em;
+    margin-bottom: 0.25em;
+    font-size: 1.3em;
+}
+
+hr.footnote-divider {
+    border: none;
+    border-top: 1px solid #bdbdbd;
+    margin: 3em 0 1.5em;
+}
+
+ol.footnotes {
+    padding-left: 1.5em;
+    font-size: 0.8em;
+    color: #555;
+    line-height: 1.6;
+}
+
+ol.footnotes li {
+    margin-bottom: 0.5em;
+}
+
+table.prose-table {
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    font-size: 0.95em;
+    width: 100%;
+}
+
+table.prose-table th,
+table.prose-table td {
+    border: 1px solid #bdbdbd;
+    padding: 0.5em 0.75em;
+    text-align: left;
+    line-height: 1.6;
+}
+
+table.prose-table thead th {
+    background-color: #f5f4ec;
+    font-weight: 600;
+}
+
+sup {
+    font-size: 0.6em;
+    line-height: 0;
+    vertical-align: super;
+}
+
+sup a {
+    text-decoration: none;
+    color: #555;
 }
 
 @media screen and (max-width: 768px) {
