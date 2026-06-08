@@ -66,7 +66,7 @@ body {
     display: none;
     font-size: 30px;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     top: 5px;
     left: 7px;
 }
@@ -284,11 +284,13 @@ figure.article-fig img {
 }
 
 figure.article-fig.medium img {
-    max-width: 420px;
+    width: 420px;
+    max-width: 100%;
 }
 
 figure.article-fig.narrow img {
-    max-width: 240px;
+    width: 240px;
+    max-width: 100%;
 }
 
 figure.article-fig figcaption {
