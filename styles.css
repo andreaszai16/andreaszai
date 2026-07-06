@@ -299,9 +299,33 @@ figure.article-fig figcaption {
     margin-top: 6px;
     line-height: 1.4;
     font-style: italic;
+    font-synthesis: none;
     font-family: 'Lora', 'Noto Serif SC', Georgia, serif;
 }
 
 blockquote p {
     margin: 0;
+}
+
+aside.endnote {
+    margin-top: 3.5em;
+    padding-top: 0.5em;
+    border-top: 1px solid #bdbdbd;
+    font-size: 0.9em;
+    color: #555;
+}
+
+aside.endnote .endnote-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 700;
+    font-size: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: #777;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+}
+
+aside.endnote p {
+    line-height: 1.65;
 }
