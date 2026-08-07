@@ -48,7 +48,7 @@ body {
 }
 
 .sidebar ul li {
-    margin-left: 10px;
+    margin-left: 0;
     margin-top: 4px;
     font-family: 'Lora', 'Noto Serif SC', Georgia, serif;
 }
