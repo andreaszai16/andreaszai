@@ -1,8 +1,8 @@
 function openNav() {
-    document.getElementById("sidebar").style.width = "135px";
+    document.getElementById("sidebar").style.width = "var(--sidebar-w)";
     document.getElementById("sidebar").style.padding = "20px 20px";
 
-    document.getElementById("content").style.marginLeft = "180px";
+    document.getElementById("content").style.marginLeft = "calc(var(--sidebar-w) + 45px)";
 
     document.getElementById("closebtn").style.transition = "0.3s 0.3s";
     document.getElementById("closebtn").style.visibility = "visible";

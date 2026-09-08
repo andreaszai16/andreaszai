@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,500;1,400&family=Noto+Serif+SC:wght@400;500&display=swap');
 
+:root {
+    /* Open width of the sidebar. Must fit the longest article title
+       on one line, since .sidebar sets white-space: nowrap. */
+    --sidebar-w: 175px;
+}
+
 html, body {
     height: 100%;
     margin: 0;
@@ -13,7 +19,7 @@ body {
 }
 
 .sidebar {
-    width: 135px;
+    width: var(--sidebar-w);
     background-color: #fffef6;
     padding: 20px 20px;
     border-right-style: solid;
@@ -53,11 +59,23 @@ body {
     font-family: 'Lora', 'Noto Serif SC', Georgia, serif;
 }
 
+/* The "09." prefixes use proportional figures, so their widths differ by ~1.5px
+   and the titles would each start at a different x. A fixed-width box for the
+   number lines every title up, independent of the font's digit metrics. */
+.sidebar ul li a .num {
+    display: inline-block;
+    width: 1.9em;
+}
+
 .content {
-    margin-left: 200px;
+    margin-left: calc(var(--sidebar-w) + 65px);
     padding: 60px 20px;
     color: #2f2f2f;
     flex: 1;
+    /* Flex items default to min-width:auto, which refuses to shrink below the
+       intrinsic width of their contents (e.g. a 420px figure). Without this the
+       page overflows and scrolls sideways on narrow screens. */
+    min-width: 0;
     font-family: 'Lora', 'Noto Serif SC', Georgia, serif;
     transition: margin-left 0.3s;
 }
@@ -170,6 +188,15 @@ h2 {
     font-size: 1.3em;
 }
 
+/* Scene break within an article: a short centered rule, used instead of
+   an <h2> where a section shift needs no heading. */
+hr.scene-break {
+    border: none;
+    border-top: 1px solid #bdbdbd;
+    width: 80px;
+    margin: 2.75em auto;
+}
+
 hr.footnote-divider {
     border: none;
     border-top: 1px solid #bdbdbd;
@@ -279,16 +306,19 @@ figure.article-fig {
 
 figure.article-fig img {
     display: block;
-    max-width: 100%;
+    width: 100%;
+    height: auto; /* never stretch: height always follows from width */
     margin: 0 auto;
 }
 
-figure.article-fig.medium img {
+/* The size lives on the figure, not the img, so the caption wraps to the
+   width of the photo instead of running the full width of the article. */
+figure.article-fig.medium {
     width: 420px;
     max-width: 100%;
 }
 
-figure.article-fig.narrow img {
+figure.article-fig.narrow {
     width: 240px;
     max-width: 100%;
 }
@@ -305,6 +335,10 @@ figure.article-fig figcaption {
 
 blockquote p {
     margin: 0;
+}
+
+blockquote.tale p + p {
+    margin-top: 0.9em;
 }
 
 aside.endnote {
